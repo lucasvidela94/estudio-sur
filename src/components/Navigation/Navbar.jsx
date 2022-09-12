@@ -1,80 +1,91 @@
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/react.svg";
+
 const Navbar = () => {
   return (
-    <header id="header" className="header d-flex align-items-center">
-      <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <a href="#index" className="logo d-flex align-items-center">
-          <h1>
-            Estudio sur <span>.</span>
+    <header id="header" className="fixed-top ">
+      <div className="container container-navbar d-flex align-items-center justify-content-between">
+        <div className="d-flex flex-row justify-content-center align-items-center">
+          <a href="/" className="logo">
+            <img src={logo} alt="" className="img-fluid" />
+          </a>
+          <h1 className="logo">
+            <NavLink to="/">Estudio sur</NavLink>
           </h1>
-        </a>
-        <i className="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
         <nav id="navbar" className="navbar">
           <ul>
             <li>
-              <a href="index.html" className="active">
+              <a className="nav-link scrollto active" href="#hero">
                 Inicio
               </a>
             </li>
             <li>
-              <a href="#about">Acerca de mi</a>
+              <a className="nav-link scrollto" href="#about">
+                Acerca de mi
+              </a>
             </li>
             <li>
-              <a href="#services">Servicios</a>
+              <a className="nav-link scrollto" href="#projects">
+                Trabajos
+              </a>
             </li>
             <li>
-              <a href="#projects">Proyectos</a>
+              <a className="nav-link scrollto " href="#asesorias">
+                Asesorias
+              </a>
             </li>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
-            <li className="dropdown">
+            {/* <li className="dropdown"> 
               <a href="#">
-                <span>Dropdown</span>{" "}
-                <i className="bi bi-chevron-down dropdown-indicator"></i>
+                <span>Drop Down</span> <i className="bi bi-chevron-down"></i>
               </a>
               <ul>
                 <li>
-                  <a href="#">Dropdown 1</a>
+                  <a href="#">Drop Down 1</a>
                 </li>
                 <li className="dropdown">
                   <a href="#">
-                    <span>Dropdown profundo</span>{" "}
-                    <i className="bi bi-chevron-down dropdown-indicator"></i>
+                    <span>Deep Drop Down</span>{" "}
+                    <i className="bi bi-chevron-right"></i>
                   </a>
                   <ul>
                     <li>
-                      <a href="#">Opcion uno</a>
+                      <a href="#">Deep Drop Down 1</a>
                     </li>
                     <li>
-                      <a href="#">Opcion dos</a>
+                      <a href="#">Deep Drop Down 2</a>
                     </li>
                     <li>
-                      <a href="#">Opcion tres</a>
+                      <a href="#">Deep Drop Down 3</a>
                     </li>
                     <li>
-                      <a href="#">Opcion cuatro</a>
+                      <a href="#">Deep Drop Down 4</a>
                     </li>
                     <li>
-                      <a href="#">Opcion cinco</a>
+                      <a href="#">Deep Drop Down 5</a>
                     </li>
                   </ul>
                 </li>
+                
                 <li>
-                  <a href="#">Dropdown 2</a>
+                  <a href="#">Drop Down 2</a>
                 </li>
                 <li>
-                  <a href="#">Dropdown 3</a>
+                  <a href="#">Drop Down 3</a>
                 </li>
                 <li>
-                  <a href="#">Dropdown 4</a>
+                  <a href="#">Drop Down 4</a>
                 </li>
               </ul>
             </li>
+            */}
             <li>
-              <a href="#contact">Contacto</a>
+              <NavLink className="nav-link scrollto" to="/contact">
+                Contacto
+              </NavLink>
             </li>
           </ul>
+          <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
       </div>
     </header>

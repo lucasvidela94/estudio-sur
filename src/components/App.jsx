@@ -1,19 +1,19 @@
 import Navbar from "./Navigation/Navbar";
-import AboutMe from "./Sections/AboutMe";
-import Contact from "./Sections/Contact";
-import HeroSection from "./Sections/Hero";
-import Projects from "./Sections/Projects";
 import Footer from "./Navigation/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Sections/Home";
+import Contact from "./Sections/Contact";
+
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <HeroSection />
-      <AboutMe />
-      <Projects />
-      <Contact />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

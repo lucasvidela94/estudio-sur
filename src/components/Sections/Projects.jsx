@@ -3,9 +3,9 @@ import Card from "../Elements/Card";
 const Projects = () => {
   return (
     <section id="projects" className="projects">
-      <div className="container" data-aos="fade-up">
+      <div className="about">
         <div className="section-header">
-          <h2>Trabajos </h2>
+          <h2 className="section-header-title">Trabajos </h2>
           <p>
             Consequatur libero assumenda est voluptatem est quidem illum et
             officia imilique qui vel architecto accusamus fugit aut qui

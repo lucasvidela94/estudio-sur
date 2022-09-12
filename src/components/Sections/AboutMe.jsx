@@ -1,22 +1,19 @@
-const AboutMe = () => {
+import AboutMeImage from "../../assets/image1.png";
+
+const AboutMe = ({ image, title, description, networks }) => {
   return (
     <>
-      <section id="about" className="about">
+      <section id="about" className="about ">
         <div className="container" data-aos="fade-up">
           <div className="row no-gutters">
             <div className="col-lg-6 video-box">
-              <img src="assets/img/about.jpg" className="img-fluid" alt="" />
+              <img src={image} className="img-fluid about_me_image" alt="" />
             </div>
 
             <div className="col-lg-6 d-flex flex-column justify-content-center about-content">
               <div className="section-title">
-                <h2>Andrea Videla</h2>
-                <p>
-                  Magnam dolores commodi suscipit. Necessitatibus eius
-                  consequatur ex aliquid fuga eum quidem. Sit sint consectetur
-                  velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit
-                  suscipit alias ea.
-                </p>
+                <h2>{title}</h2>
+                <p>{description}</p>
               </div>
 
               <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
